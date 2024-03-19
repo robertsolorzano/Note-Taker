@@ -27,4 +27,20 @@ router.post('/notes', (req, res) => {
     });
 });
 
+router.delete('/notes/:id', (req, res) => {
+    const noteId = req.params.id;
+  
+    readFromFile('./db/db.json')
+      .then((data) => {
+        const notes = JSON.parse(data);
+        const updatedNotes = notes.filter((note) => note.id !== noteId);
+        return writeToFile('./db/db.json', updatedNotes);
+      })
+      .then(() => res.json({ message: 'Note deleted successfully' }))
+      .catch((err) => {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to delete note' });
+      });
+  });
+
 module.exports = router;
