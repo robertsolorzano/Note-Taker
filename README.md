@@ -6,8 +6,8 @@ The Note Taker is a web application that allows users to create, save, and manag
 
 ## Table of Contents
 
+- [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Contributing](#contributing)
 - [Credits](#credits)
 - [License](#license)
