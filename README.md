@@ -11,6 +11,7 @@ The Note Taker is a web application that allows users to create, save, and manag
 
 - [Features](#features)
 - [Installation](#installation)
+- [Usage](#usage)
 - [Contributing](#contributing)
 - [Credits](#credits)
 - [License](#license)
@@ -41,6 +42,9 @@ npm start
 
 4. Open your browser and visit ```http://localhost:3000```
 
+## Usage
+
+Youn can utilize the live deployed version on Heroku here: [Note Taker App](https://notetakerapp-rs-7586fc3532d2.herokuapp.com/)
 
 ## Contributing
 
