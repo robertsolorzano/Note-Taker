@@ -2,10 +2,12 @@ const router = require('express').Router();
 const { readFromFile, writeToFile } = require('../helpers/fsUtils');
 const { v4: uuidv4 } = require('uuid');
 
+// GET route to retrieve all notes
 router.get('/notes', (req, res) => {
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
+// POST route to create a new note
 router.post('/notes', (req, res) => {
   const newNote = {
     id: uuidv4(),
@@ -27,6 +29,7 @@ router.post('/notes', (req, res) => {
     });
 });
 
+// Delete route to remove a note by its ID
 router.delete('/notes/:id', (req, res) => {
     const noteId = req.params.id;
   
